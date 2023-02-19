@@ -1,6 +1,6 @@
-# Getting Started with Create React WeatherPage
+# Getting Started with Create React MainPage
 
-This project was bootstrapped with [Create React WeatherPage](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React MainPage](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 

@@ -1,12 +1,10 @@
 import React, { FC } from 'react';
-import { INasa } from '../../models/INasa';
+import styles from './styles.module.scss';
 
-const Header: FC<INasa> = ({ title, explanation, url }) => {
+const Header: FC = () => {
   return (
-    <header>
-      <h1>{title}</h1>
-      <p>{explanation}</p>
-      <img src={url} />
+    <header className={styles.header}>
+      <h2>HEADER</h2>
     </header>
   );
 };

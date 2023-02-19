@@ -9,6 +9,6 @@ export async function getNasa() {
       return response.data;
     })
     .catch(() => {
-      console.log('Не удалось получить данные с Nasa');
+      console.log('Не удалось получить данные с NasaMain');
     });
 }

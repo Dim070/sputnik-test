@@ -5,10 +5,13 @@ import { INasa } from '../models/INasa';
 import { getWeather } from '../services/weatherService';
 import { getNasa } from '../services/nasaService';
 import Header from '../components/header/Header';
-import Weather from '../components/weather/Weather';
+import WeatherMain from '../components/weatherMain/WeatherMain';
 import Footer from '../components/footer/Footer';
+import NasaMain from '../components/nasaMain/NasaMain';
+import { Container } from '@mui/material';
+import styles from './styles.module.scss';
 
-function WeatherPage() {
+function MainPage() {
   const [nasaData, setNasaData] = useState<INasa>(DEFAULT_NASA);
   const [weatherData, setWeatherData] = useState<IWeather>(DEFAULT_WEATHER);
 
@@ -21,16 +24,21 @@ function WeatherPage() {
   }, []);
 
   return (
-    <div className="App">
-      <Header title={nasaData.title} explanation={nasaData.explanation} url={nasaData.url} />
-      <Weather
-        city={weatherData.name}
-        weatherIconData={weatherData.weather[0].icon}
-        temperature={weatherData.main.temp}
-      />
-      <Footer />
-    </div>
+    <>
+      <Container className={styles.container} sx={{ display: 'flex' }}>
+        <Header />
+        <main className={styles.content}>
+          <WeatherMain
+            city={weatherData.name}
+            weatherIconData={weatherData.weather[0].icon}
+            temperature={weatherData.main.temp}
+          />
+          <NasaMain title={nasaData.title} explanation={nasaData.explanation} url={nasaData.url} />
+        </main>
+        <Footer />
+      </Container>
+    </>
   );
 }
 
-export default WeatherPage;
+export default MainPage;
