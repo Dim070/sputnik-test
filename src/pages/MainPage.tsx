@@ -10,6 +10,7 @@ import Footer from '../components/footer/Footer';
 import NasaMain from '../components/nasaMain/NasaMain';
 import { Container } from '@mui/material';
 import styles from './styles.module.scss';
+import { useBackgroundChanger } from '../hooks/BackgroundChanger';
 
 function MainPage() {
   const [nasaData, setNasaData] = useState<INasa>(DEFAULT_NASA);
@@ -23,9 +24,10 @@ function MainPage() {
     getNasa().then((response) => setNasaData(response || DEFAULT_NASA));
   }, []);
 
+  const timeOfDayBackground = useBackgroundChanger();
   return (
     <>
-      <Container className={styles.container} sx={{ display: 'flex' }}>
+      <Container className={styles.container} sx={{ display: 'flex', backgroundColor: `${timeOfDayBackground}` }}>
         <Header />
         <main className={styles.content}>
           <WeatherMain
