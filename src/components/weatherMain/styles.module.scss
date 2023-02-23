@@ -1,12 +1,14 @@
+@import "./src/assets/scss/variable";
+
 .weatherMain {
   width: 20%;
-  border: 1px solid saddlebrown;
+  border: 1px solid $border-color;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 5px;
-  font-size: 24px;
+  font-size: 16px;
   font-style: italic;
   height: 300px;
   justify-content: center;
@@ -21,7 +23,7 @@
   }
 
   .img {
-    border: 1px solid saddlebrown;
+    border: 1px solid $border-color;
     border-radius: 10px;
   }
 

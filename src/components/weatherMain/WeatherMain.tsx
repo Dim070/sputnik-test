@@ -7,9 +7,10 @@ interface Props {
   weatherIconData: string;
   temperature: number;
   city: string;
+  timeOfDayBackground: string;
 }
 
-const WeatherMain: FC<Props> = ({ weatherIconData, city, temperature }) => {
+const WeatherMain: FC<Props> = ({ weatherIconData, city, temperature, timeOfDayBackground }) => {
   const [currentTime, setCurrentTime] = useState<string>('');
   const [currentTemp, setCurrentTemp] = useState<string>('');
 
@@ -26,7 +27,7 @@ const WeatherMain: FC<Props> = ({ weatherIconData, city, temperature }) => {
   }, []);
 
   return (
-    <section className={styles.weatherMain}>
+    <section className={styles.weatherMain} style={{ backgroundColor: `${timeOfDayBackground}` }}>
       <h2 className={styles.city}>{city}</h2>
       <>
         <span className={styles.temperature}>{currentTemp}</span>

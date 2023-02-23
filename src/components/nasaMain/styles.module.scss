@@ -3,21 +3,22 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-    .description {
-      font-size: 18px;
-      line-height: 24px;
-    }
 
-    .img {
-      width: 600px;
-      border-radius: 10px;
-      transition: 1s;
-      display: block;
-      margin: 0 auto;
+  .description {
+    font-size: 18px;
+    line-height: 24px;
+  }
 
-      &:hover {
-        transform: scale(1.45);
-        transform-origin: 50% 0;
-      }
+  .img {
+    width: 600px;
+    border-radius: 10px;
+    transition: 1s;
+    display: block;
+    margin: 0 auto;
+
+    &:hover {
+      transform: scale(1.45);
+      transform-origin: 50% 0;
     }
+  }
 }

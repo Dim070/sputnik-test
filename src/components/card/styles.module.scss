@@ -1,0 +1,27 @@
+@import "src/assets/scss/_variable.scss";
+
+.card {
+  width: 210px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid $border-color;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 1),
+  -23px 0 20px -23px rgba(0, 0, 0, .8),
+  23px 0 20px -23px rgba(0, 0, 0, .8),
+  0 0 40px rgba(0, 0, 0, .1) inset;
+  box-sizing: border-box;
+
+  .fullName {
+    margin: 0 auto;
+    font-size: 18px;
+    border-bottom: 1px solid $border-color;
+  }
+
+  .img {
+    width: 200px;
+    height: 300px;
+  }
+}
